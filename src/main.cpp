@@ -17,9 +17,19 @@ void off(void)
 int main() {
     InterruptIn  left(SW2);
     InterruptIn right(SW3);
+    InterruptIn topLeft(A4);
+    InterruptIn topRight(A5);
+    InterruptIn topUp(A2);
+    InterruptIn topDown(A3);
+    InterruptIn topCenter(D4);
 
     left.rise(on);
     right.fall(off);
+    topLeft.rise(on);
+    topRight.fall(off);
+    topUp.rise(on);
+    topDown.fall(off);
+    topCenter.rise(on);
     while(1) {
         /* GNDN */
     }
